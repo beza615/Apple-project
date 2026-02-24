@@ -1,0 +1,29 @@
+.portfolio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    margin: 50px;
+
+}
+.portfolioTitle h1{
+font-size: 80px;
+color: white;
+}
+.portfolioComponent{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-direction: row;
+
+}
+.portfolioComponent img{
+   width: 100%;      
+  max-width: 300px; 
+  height: 200px;    
+  object-fit: cover; 
+  border-radius: 8px;
+
+}

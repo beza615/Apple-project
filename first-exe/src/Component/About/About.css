@@ -1,0 +1,130 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 5%;
+  color: white;
+  background-color: #000;
+}
+
+.aboutTitle h1 {
+  font-size: 45px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.aboutBody {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  /* This pushes everything to the far left */
+  justify-content: flex-start; 
+  align-items: center;
+  gap: 40px;
+}
+
+.aboutImageContainer {
+  position: relative;
+  cursor: pointer;
+  perspective: 1000px;
+  /* Ensures the container stays on the left */
+  flex-shrink: 0; 
+}
+
+.aboutImageContainer img {
+  /* Smaller image size as requested */
+  width: 220px; 
+  border-radius: 12px;
+  border: none;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.rotate-active {
+  transform: rotateY(360deg);
+}
+
+.imageQuote {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 85%;
+  background: rgba(0, 0, 0, 0.9);
+  padding: 10px;
+  border-radius: 8px;
+  text-align: center;
+  border: 1px solid #ff4d4d;
+  z-index: 10;
+}
+
+.imageQuote p {
+  color: #ff4d4d;
+  font-weight: bold;
+  font-size: 13px;
+  margin: 0;
+}
+
+.aboutDescAndSkill {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex: 1;
+  /* Aligns the text content to the left next to the image */
+  text-align: left; 
+}
+
+.aboutDescription span {
+  font-size: 25px;
+  line-height: 1.5;
+  color: #e0e0e0;
+}
+
+.aboutSkill ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 20px;
+}
+
+.aboutSkill ul li {
+  margin-bottom: 12px;
+  transition: transform 0.3s ease;
+}
+
+.aboutSkill ul li:hover {
+  transform: translateX(8px);
+}
+
+.skillLabel {
+  font-weight: 600;
+  margin-bottom: 4px;
+  font-size: 13px;
+}
+
+.skillBarContainer {
+  width: 100%;
+  background: #1a1a1a;
+  border-radius: 10px;
+  height: 5px;
+}
+
+.aboutSkill li hr {
+  height: 100%;
+  border: none;
+  background: linear-gradient(90deg, #ff4d4d, #f9d423);
+  border-radius: 10px;
+  margin: 0;
+}
+
+/* For Mobile screens */
+@media (max-width: 768px) {
+  .aboutBody {
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+  }
+  .aboutImageContainer {
+    margin-bottom: 20px;
+  }
+}

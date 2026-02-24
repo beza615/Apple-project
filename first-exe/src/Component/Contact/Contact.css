@@ -1,0 +1,108 @@
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 10%;
+  color: white;
+  background-color: #0f0f0f;
+}
+
+.contact-title h1 {
+  font-size: 70px;
+  font-weight: 600;
+  margin-bottom: 60px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 100px;
+}
+
+/* የግራው ክፍል ስታይል */
+.contact-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.contact-left h1 {
+  font-size: 70px;
+  font-weight: 700;
+  background: linear-gradient(267deg, #B415FF 0%, #BC3433 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.contact-left p {
+  font-size: 20px;
+  color: #d8d8d8;
+  line-height: 35px;
+  max-width: 400px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 22px;
+}
+
+/* የቀኙ ፎርም ስታይል */
+.contact-form {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.contact-form label {
+  font-size: 20px;
+  color: #d8d8d8;
+}
+
+.contact-form input, .contact-form textarea {
+  background-color: #32323c;
+  border: none;
+  padding: 20px;
+  border-radius: 5px;
+  color: white;
+  font-size: 18px;
+}
+
+.contact-form textarea {
+  height: 200px;
+  resize: none;
+}
+
+.contact-form button {
+  background: linear-gradient(264deg, #DF8908 -5%, #B415FF 106%);
+  color: white;
+  padding: 20px 60px;
+  border: none;
+  border-radius: 50px;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+  align-self: flex-start;
+  margin-top: 20px;
+}
+
+.contact-form button:hover {
+  transform: scale(1.05);
+}
+
+.status-msg {
+  margin-top: 10px;
+  color: #B415FF;
+}
+
+/* ለስልክ እንዲሆን */
+@media (max-width: 768px) {
+  .contact-container {
+    flex-direction: column;
+    gap: 50px;
+  }
+}
